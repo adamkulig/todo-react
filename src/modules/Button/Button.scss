@@ -1,0 +1,17 @@
+@import '../../scss/base.scss';
+
+.btn {
+  border-radius: 1rem;
+  background: $c-secondary;
+  color: $c-secondary-text;
+  font-size: 1.6rem;
+  margin-left: 0.1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover, &:active {
+    background: $c-secondary-dark;
+    transform: scale(1.1);
+  }
+}

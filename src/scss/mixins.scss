@@ -1,0 +1,40 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin underline($lineColor, $thickness, $lowered) {
+  position: relative;
+    &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -$lowered;
+    width: 100%;
+    height: $thickness;
+    background: $lineColor;
+  }
+}
+
+//mixin of media queries
+@mixin media($breakpoint) {
+  @if $breakpoint == 'portrait' {
+    @media only screen and (orientation:portrait) {@content};
+  }
+  @if $breakpoint == 'min600landscape' {
+    @media only screen and (min-width:600px) and (orientation:landscape) {@content};
+  }
+  @if $breakpoint == 'min600portrait' {
+    @media only screen and (min-width:600px) and (orientation:portrait) {@content};
+  }
+  @if $breakpoint == 'min900' {
+    @media only screen and (min-width:900px) {@content};
+  }
+  @if $breakpoint == 'min900landscape' {
+    @media only screen and (min-width:900px) and (orientation:landscape) {@content};
+  }
+  @if $breakpoint == 'min1200' {
+    @media only screen and (min-width:1200px) {@content};
+  }
+}

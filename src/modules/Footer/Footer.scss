@@ -1,0 +1,14 @@
+@import '../../scss/base.scss';
+
+.footer {
+  padding: 0.1rem 0;
+  background-color: $c-primary-dark;
+  @include flexCenter;
+  margin-top: auto;
+  &__text {
+    font-size: 0.5rem;
+    margin: 0.1rem 0;
+    text-align: center;
+    color: $c-primary-dark-text;
+  }
+}

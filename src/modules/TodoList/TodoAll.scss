@@ -1,0 +1,51 @@
+@import '../../scss/base.scss';
+.list {
+  display: flex;
+  flex-direction: column;
+  @include media(min900){
+    flex: 1;
+  } 
+
+  &__title {
+    background-color: $c-primary;
+    color: $c-primary-text;
+    font-size: 0.8rem;
+    padding: 0.3rem;
+    margin: 0.3rem 0;
+    text-align: center;
+  }
+  &__form {
+    padding: 0.1rem 0.1rem 0.1rem 0.4rem;
+    margin: 0.3rem;
+    border-radius: 0.2rem;
+    background-color: $c-background;
+    display: flex;
+    &--main {
+      margin: 0.3rem 0.3rem 0.5rem 0.3rem;
+      @include underline($c-background, 3px, 0.5rem);
+    }
+    &__input {
+      font-size: 0.7rem;
+      border-radius: 0.2rem;
+      background-color: $c-background;
+      color: $c-background-text;
+      flex-grow: 1;
+      &::placeholder {
+        color: $c-placeholder;
+      }
+    }
+  }
+  &__item {
+    padding: 0.1rem 0.1rem 0.1rem 0.4rem;
+    margin: 0.3rem;
+    font-size: 0.8rem;
+    border-radius: 0.2rem;
+    word-wrap: break-word;
+    background-color: $c-background;
+    display: flex;
+    align-items: center;
+    &__text {
+      flex-grow: 1;
+    }
+  }
+}
