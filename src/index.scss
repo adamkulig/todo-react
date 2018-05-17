@@ -9,6 +9,7 @@
 }
 
 html {
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   @include media('min600landscape') {
     font-size: 18px;
@@ -28,10 +29,13 @@ html {
 }
 
 body {
-  background-color: $c-primary-light;
-  background-position: center;
-  font-family: 'Open Sans', sans-serif;
+  background-image: linear-gradient(
+    to top,
+    $c-background-primary,
+    $c-background-secondary
+  );
 }
+
 input {
   font-family: 'Open Sans', sans-serif;
 }

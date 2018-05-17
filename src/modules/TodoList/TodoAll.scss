@@ -4,7 +4,21 @@
   flex-direction: column;
   @include media(min900){
     flex: 1;
-  } 
+  }
+  &:first-of-type &__title {
+    @include media(min1200) {
+      margin-right: 0.3rem;
+      padding-right: 0;
+      border-radius: 0 0.2rem 0.2rem 0;
+    }
+  }
+  &:last-of-type &__title {
+    @include media(min1200) {
+      margin-left: 0.3rem;
+      padding-left: 0;
+      border-radius: 0.2rem 0 0 0.2rem;
+    }
+  }  
 
   &__title {
     background-color: $c-primary;
@@ -13,6 +27,7 @@
     padding: 0.3rem;
     margin: 0.3rem 0;
     text-align: center;
+    
   }
   &__form {
     padding: 0.1rem 0.1rem 0.1rem 0.4rem;

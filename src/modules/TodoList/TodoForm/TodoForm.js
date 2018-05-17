@@ -3,6 +3,8 @@ import '../TodoAll.scss';
 import { Button } from '../../Button/Button.js'
 import { IoIosPlusEmpty } from 'react-icons/lib/io';
 
+const ENTER_KEY_CODE = 13;
+
 export class TodoForm extends Component {
   constructor(props) {
     super(props);
@@ -27,6 +29,10 @@ export class TodoForm extends Component {
     } 
   }
   
+  enterClicked = (event) => {
+    (event.keyCode === ENTER_KEY_CODE) && this.confirmTodoHandler()
+  }
+
   clearTodoState = () => {
     this.setState ({
       todoContent: '',
@@ -41,11 +47,14 @@ export class TodoForm extends Component {
           className="list__form__input"
           value={this.state.todoContent}
           placeholder={this.props.placeholder}
-          onChange={this.textHandler} />
+          onChange={this.textHandler} 
+          onKeyUp={this.enterClicked}
+        />
         <Button
           icon={<IoIosPlusEmpty />}
           type="add"
-          onClick={this.confirmTodoHandler}/>
+          onClick={this.confirmTodoHandler}
+        />
       </div>
     );
   }
