@@ -9,9 +9,7 @@ I used:
 - Javascript (ES6) 
 
 Capabilities:
-- adding a note
-- modify a note
-- deleting a note
+- CRUD note
 - moving notes between lists
 
 Date: 04.2018
