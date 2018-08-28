@@ -7,7 +7,7 @@
   min-height: 100vh;
   max-width: 1200px;
   @include media(min1200) {
-    height: 90vh;
+    min-height: 90vh;
     margin: 5vh auto;
     box-shadow: 2px 3px 4px $c-shadow;
     border-radius: 0.2rem;
