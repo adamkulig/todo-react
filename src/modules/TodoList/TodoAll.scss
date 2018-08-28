@@ -48,6 +48,9 @@
       &::placeholder {
         color: $c-placeholder;
       }
+      &:focus {
+        outline: 0;
+      }
     }
   }
   &__item {

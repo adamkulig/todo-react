@@ -24,7 +24,7 @@ export class TodoItem extends React.Component {
     this.setState({
       currentText: writtenText,
     });
-    }
+  }
   
   confirmModifyTodoHandler = () => {
     const {currentId, currentText} = this.state;
